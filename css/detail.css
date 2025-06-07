@@ -1,0 +1,197 @@
+main.detail-page {
+  background-color: #111;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.detail-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.detail-poster {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.detail-info {
+  flex: 1;
+}
+
+.genre-badge {
+  padding: 5px 10px;
+  margin-right: 5px;
+  display: inline-block;
+  background-color: #333; /* Contoh warna latar belakang untuk badge genre */
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+.related-movies {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-top: 15px;
+}
+.related-movies a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  flex: 0 0 auto;
+}
+.related-movies img {
+  width: 120px;
+  border-radius: 6px;
+  display: block;
+}
+.btn-mylist {
+  margin-top: 10px;
+  background-color: #b10e1e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-mylist:hover {
+  background-color: #8b0c16;
+}
+
+.star-rating {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: 5px 0;
+}
+.star-rating .fa-star {
+  color: #444;
+}
+.star-rating .fa-star.filled {
+  color: #ff0000;
+}
+
+.rating-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.rating-score {
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: #444;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.votes-info {
+  margin-top: 5px;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 768px) {
+  .detail-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .detail-poster {
+    max-width: 200px;
+  }
+  .detail-info {
+    text-align: center;
+  }
+  .genre-badge {
+    margin-bottom: 5px;
+  }
+  .rating-info,
+  .votes-info {
+    justify-content: center;
+  }
+}
+
+/* Styles for Synopsis section */
+.synopsis-header {
+  background: linear-gradient(to right, #4a040b, #b10e1e);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.synopsis-header:hover {
+  background: linear-gradient(to right, #3a0308, #8b0c16);
+}
+
+.synopsis-header .fa-chevron-down,
+.synopsis-header .fa-chevron-up {
+  transition: transform 0.3s ease;
+}
+
+.synopsis-content {
+  margin-top: 10px;
+  line-height: 1.6;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  max-height: 100px;
+}
+
+.synopsis-content.expanded {
+  max-height: 1000px;
+}
+
+.read-more-btn {
+  color: #ff0000;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.synopsis-paragraph {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Penyesuaian untuk video */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: black;
+}
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
